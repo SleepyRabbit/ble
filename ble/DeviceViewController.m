@@ -27,6 +27,7 @@
     // Do any additional setup after loading the view.
     _tableView.dataSource = self;
     _manager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
+    _discoverPeripherals = [NSMutableArray array];
     _label.text = @"Please start scan";
 //    _tableView.rowHeight = 60;
 }
@@ -71,27 +72,28 @@
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     switch (central.state) {
-        case CBCentralManagerStateUnknown:
+//        case CBCentralManagerStateUnknown:
+        case CBManagerStateUnknown:
             NSLog(@">>>CBCentralManagerStateUnknown");
             _label.text = @">>>CBCentralManagerStateUnknown";
             break;
-        case CBCentralManagerStateResetting:
+        case CBManagerStateResetting:
             NSLog(@">>>CBCentralManagerStateResetting");
             _label.text = @">>>CBCentralManagerStateResetting";
             break;
-        case CBCentralManagerStateUnsupported:
+        case CBManagerStateUnsupported:
             NSLog(@">>>CBCentralManagerStateUnsupported");
             _label.text = @">>>CBCentralManagerStateUnsupported";
             break;
-        case CBCentralManagerStateUnauthorized:
+        case CBManagerStateUnauthorized:
             NSLog(@">>>CBCentralManagerStateUnauthorized");
             _label.text = @">>>CBCentralManagerStateUnauthorized";
             break;
-        case CBCentralManagerStatePoweredOff:
+        case CBManagerStatePoweredOff:
             NSLog(@">>>CBCentralManagerStatePoweredOff");
             _label.text = @">>>CBCentralManagerStatePoweredOff";
             break;
-        case CBCentralManagerStatePoweredOn:
+        case CBManagerStatePoweredOn:
             NSLog(@">>>CBCentralManagerStatePoweredOn");
             _label.text = @">>>CBCentralManagerStatePoweredOn";
 
