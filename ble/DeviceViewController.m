@@ -12,12 +12,13 @@
 @interface DeviceViewController ()<UITableViewDataSource, UITabBarControllerDelegate, CBCentralManagerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *label;
 - (IBAction)onScan:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btn;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) CBCentralManager *manager;
 //用于保存被发现设备
-@property (weak, nonatomic) NSMutableArray *discoverPeripherals;
+@property (strong, nonatomic) NSMutableArray *discoverPeripherals;
 //连接上的外部设备
-@property (weak, nonatomic) CBPeripheral *_peripheral ;
+@property (strong, nonatomic) CBPeripheral *_peripheral ;
 @end
 
 @implementation DeviceViewController
@@ -28,7 +29,7 @@
     _tableView.dataSource = self;
     _manager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
     _discoverPeripherals = [NSMutableArray array];
-    _label.text = @"Please start scan";
+    _label.text = @"Scan";
 //    _tableView.rowHeight = 60;
 }
 
@@ -124,7 +125,13 @@
 
 - (IBAction)onScan:(id)sender {
     NSLog(@"scan!");
-    _label.text = @"scan";
-    [_manager scanForPeripheralsWithServices:nil options:nil];
+    if([_btn.titleLabel.text isEqual:@"Scan"]) {
+        [_btn setTitle:@"Stop" forState:UIControlStateNormal];
+        [_manager scanForPeripheralsWithServices:nil options:nil];
+    }
+    else {
+        [_btn setTitle:@"Scan" forState:UIControlStateNormal];
+        [_manager stopScan];
+    }
 }
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06576B181FC97D62005A48A5 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06576B171FC97D62005A48A5 /* MyViewController.m */; };
 		06D7F06B1FC6A36500903E18 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7F06A1FC6A36500903E18 /* DeviceViewController.m */; };
 		06D7F06E1FC6A37D00903E18 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7F06D1FC6A37D00903E18 /* ListViewController.m */; };
 		26485370C46E9C67B7839222 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26485417AFCDF23E21F56105 /* main.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06576B161FC97D62005A48A5 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		06576B171FC97D62005A48A5 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		06D7F0691FC6A36500903E18 /* DeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
 		06D7F06A1FC6A36500903E18 /* DeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceViewController.m; sourceTree = "<group>"; };
 		06D7F06C1FC6A37D00903E18 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
@@ -60,6 +63,8 @@
 				26485BFD4B4FB1EEC60B072D /* AppDelegate.h */,
 				264851BC18084A24E0863BB2 /* AppDelegate.m */,
 				2648550997CD3FC707279499 /* Main.storyboard */,
+				06576B161FC97D62005A48A5 /* MyViewController.h */,
+				06576B171FC97D62005A48A5 /* MyViewController.m */,
 				06D7F0691FC6A36500903E18 /* DeviceViewController.h */,
 				06D7F06A1FC6A36500903E18 /* DeviceViewController.m */,
 				06D7F06C1FC6A37D00903E18 /* ListViewController.h */,
@@ -148,6 +153,7 @@
 				06D7F06B1FC6A36500903E18 /* DeviceViewController.m in Sources */,
 				06D7F06E1FC6A37D00903E18 /* ListViewController.m in Sources */,
 				26485EA79A692142C4C7EEBA /* AppDelegate.m in Sources */,
+				06576B181FC97D62005A48A5 /* MyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
