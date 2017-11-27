@@ -18,19 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    _tableView.separatorColor = [UIColor blueColor];
-    _tableView.tableFooterView = [[UIView alloc] init];
+    _tableView.delegate = self;                                         //tableView delegate
+    _tableView.dataSource = self;                                       //tableView dataSource
+//    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;  //Single separator line
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;      //No separator line
+    _tableView.backgroundColor = [UIColor colorWithRed:198/255.0 green:198/255.0 blue:203/255.0 alpha:1];
+//    _tableView.separatorColor = [UIColor blueColor];
+//    _tableView.tableFooterView = [[UIView alloc] init];
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark
+#pragma mark <TableView delegate>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -51,6 +57,8 @@
     switch(indexPath.row) {
         case 0:
             cell.textLabel.text = @"我的设备";
+            cell.detailTextLabel.text = @"我问问";
+            cell.imageView.image = [UIImage imageNamed:@"1.png"];
             break;
         case 1:
             cell.textLabel.text = @"我的收藏";
