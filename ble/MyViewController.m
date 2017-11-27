@@ -7,6 +7,7 @@
 //
 
 #import "MyViewController.h"
+#import "MyDeviceViewController.h"
 
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -85,6 +86,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [_tableView cellForRowAtIndexPath:indexPath];
     NSLog(@"Select is: %@", cell.textLabel.text);
+
+    if(indexPath.section == 0) {
+        if(indexPath.row == 1) {
+            MyDeviceViewController *myDeviceViewController = [[MyDeviceViewController alloc] init];
+//            [self.navigationController pushViewController:myDeviceViewController animated:NO];
+            
+        }
+    }
 }
 
 /*
