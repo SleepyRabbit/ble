@@ -20,9 +20,9 @@
     // Do any additional setup after loading the view.
     _tableView.delegate = self;                                         //tableView delegate
     _tableView.dataSource = self;                                       //tableView dataSource
-//    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;  //Single separator line
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;      //No separator line
-    _tableView.backgroundColor = [UIColor colorWithRed:198/255.0 green:198/255.0 blue:203/255.0 alpha:1];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;  //Single separator line
+//    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;      //No separator line
+//    _tableView.backgroundColor = [UIColor colorWithRed:198/255.0 green:198/255.0 blue:203/255.0 alpha:1];
 //    _tableView.separatorColor = [UIColor blueColor];
 //    _tableView.tableFooterView = [[UIView alloc] init];
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -53,6 +53,10 @@
     if(!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuse];
     }
+
+    cell.separatorInset = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
+    cell.layoutMargins = UIEdgeInsetsZero;
+    cell.preservesSuperviewLayoutMargins = NO;
 
     switch(indexPath.row) {
         case 0:
