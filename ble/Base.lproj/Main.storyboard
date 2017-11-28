@@ -195,12 +195,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vl4-n5-wmh">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vl4-n5-wmh">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vl4-n5-wmh" firstAttribute="bottom" secondItem="LOI-UJ-1rs" secondAttribute="bottom" id="HMh-9f-A7h"/>
+                            <constraint firstItem="Vl4-n5-wmh" firstAttribute="top" secondItem="LOI-UJ-1rs" secondAttribute="top" id="P9h-jg-WDG"/>
+                            <constraint firstItem="Vl4-n5-wmh" firstAttribute="trailing" secondItem="LOI-UJ-1rs" secondAttribute="trailing" id="UF6-hg-5Jk"/>
+                            <constraint firstItem="Vl4-n5-wmh" firstAttribute="leading" secondItem="LOI-UJ-1rs" secondAttribute="leading" id="ZKn-cH-kGi"/>
+                            <constraint firstItem="Vl4-n5-wmh" firstAttribute="width" secondItem="LOI-UJ-1rs" secondAttribute="width" id="bX5-4e-juN"/>
+                            <constraint firstItem="Vl4-n5-wmh" firstAttribute="height" secondItem="LOI-UJ-1rs" secondAttribute="height" id="mvS-gw-nGq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LOI-UJ-1rs"/>
                     </view>
                     <navigationItem key="navigationItem" title="List" id="7eM-5r-pRA"/>
