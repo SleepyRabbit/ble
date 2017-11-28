@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06576B181FC97D62005A48A5 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06576B171FC97D62005A48A5 /* MyViewController.m */; };
+		066125CC1FCD5392003AE2CF /* expression.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 066125CB1FCD5392003AE2CF /* expression.jpg */; };
 		0695D3671FCC73820000171F /* MyDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0695D3661FCC73820000171F /* MyDeviceViewController.m */; };
 		06D7F06B1FC6A36500903E18 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7F06A1FC6A36500903E18 /* DeviceViewController.m */; };
 		06D7F06E1FC6A37D00903E18 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7F06D1FC6A37D00903E18 /* ListViewController.m */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		06576B161FC97D62005A48A5 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		06576B171FC97D62005A48A5 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		066125CB1FCD5392003AE2CF /* expression.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = expression.jpg; path = ../../../../../../../Downloads/expression.jpg; sourceTree = "<group>"; };
 		0695D3651FCC73820000171F /* MyDeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDeviceViewController.h; sourceTree = "<group>"; };
 		0695D3661FCC73820000171F /* MyDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeviceViewController.m; sourceTree = "<group>"; };
 		06D7F0691FC6A36500903E18 /* DeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		066125CA1FCD5373003AE2CF /* image */ = {
+			isa = PBXGroup;
+			children = (
+				066125CB1FCD5392003AE2CF /* expression.jpg */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		2648530BECA1F8D1DFA6BCCD /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +69,7 @@
 		26485401A73D84758F897A89 /* ble */ = {
 			isa = PBXGroup;
 			children = (
+				066125CA1FCD5373003AE2CF /* image */,
 				26485B5D83C1E9BFF463952B /* Info.plist */,
 				264850B4E58BC91F1B2C8DB6 /* Assets.xcassets */,
 				264853975999D690C0E06EB0 /* LaunchScreen.storyboard */,
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2648599DBB345E5A13FA9C94 /* Assets.xcassets in Resources */,
+				066125CC1FCD5392003AE2CF /* expression.jpg in Resources */,
 				2648543981E895ED1E26F333 /* LaunchScreen.storyboard in Resources */,
 				26485DAD4A8F8F218A679489 /* Main.storyboard in Resources */,
 			);

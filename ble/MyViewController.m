@@ -64,18 +64,24 @@
             cell.textLabel.text = @"我的设备";
             cell.detailTextLabel.text = @"我问问";
             cell.imageView.image = [UIImage imageNamed:@"1.png"];
+            cell.accessoryType = UITableViewCellAccessoryNone;
             break;
         case 1:
             cell.textLabel.text = @"我的收藏";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 2:
             cell.textLabel.text = @"地址管理";
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
             break;
         case 3:
             cell.textLabel.text = @"反馈";
+            cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
             break;
         case 4:
             cell.textLabel.text = @"关于";
+            cell.accessoryType = UITableViewCellAccessoryDetailButton;
+
             break;
         default:
             break;
@@ -89,9 +95,9 @@
 
     if(indexPath.section == 0) {
         if(indexPath.row == 1) {
-            MyDeviceViewController *myDeviceViewController = [[MyDeviceViewController alloc] init];
-//            [self.navigationController pushViewController:myDeviceViewController animated:NO];
-            
+            MyDeviceViewController *myDeviceViewController = (MyDeviceViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MyDeviceViewController"];
+            [self.navigationController pushViewController:myDeviceViewController animated:NO];
+
         }
     }
 }
