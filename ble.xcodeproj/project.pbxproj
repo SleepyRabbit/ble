@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		06576B181FC97D62005A48A5 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06576B171FC97D62005A48A5 /* MyViewController.m */; };
 		065C57AC1FCD9C39003EC649 /* expression.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 065C57AB1FCD9C39003EC649 /* expression.jpg */; };
+		065C57B21FCEE112003EC649 /* AddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C57B11FCEE112003EC649 /* AddDeviceViewController.m */; };
 		0695D3671FCC73820000171F /* MyDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0695D3661FCC73820000171F /* MyDeviceViewController.m */; };
 		06D7F06B1FC6A36500903E18 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7F06A1FC6A36500903E18 /* DeviceViewController.m */; };
 		06D7F06E1FC6A37D00903E18 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7F06D1FC6A37D00903E18 /* ListViewController.m */; };
@@ -23,6 +24,8 @@
 		06576B161FC97D62005A48A5 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		06576B171FC97D62005A48A5 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		065C57AB1FCD9C39003EC649 /* expression.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = expression.jpg; path = ble/img/expression.jpg; sourceTree = SOURCE_ROOT; };
+		065C57B01FCEE112003EC649 /* AddDeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddDeviceViewController.h; sourceTree = "<group>"; };
+		065C57B11FCEE112003EC649 /* AddDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddDeviceViewController.m; sourceTree = "<group>"; };
 		0695D3651FCC73820000171F /* MyDeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDeviceViewController.h; sourceTree = "<group>"; };
 		0695D3661FCC73820000171F /* MyDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeviceViewController.m; sourceTree = "<group>"; };
 		06D7F0691FC6A36500903E18 /* DeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				264850B4E58BC91F1B2C8DB6 /* Assets.xcassets */,
 				264853975999D690C0E06EB0 /* LaunchScreen.storyboard */,
 				26485417AFCDF23E21F56105 /* main.m */,
+				065C57B01FCEE112003EC649 /* AddDeviceViewController.h */,
+				065C57B11FCEE112003EC649 /* AddDeviceViewController.m */,
 				26485BFD4B4FB1EEC60B072D /* AppDelegate.h */,
 				264851BC18084A24E0863BB2 /* AppDelegate.m */,
 				2648550997CD3FC707279499 /* Main.storyboard */,
@@ -127,6 +132,7 @@
 				TargetAttributes = {
 					264854C7B2FF0BB24D643C4F = {
 						DevelopmentTeam = BG2BJ9SBFR;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -169,6 +175,7 @@
 				26485370C46E9C67B7839222 /* main.m in Sources */,
 				06D7F06B1FC6A36500903E18 /* DeviceViewController.m in Sources */,
 				06D7F06E1FC6A37D00903E18 /* ListViewController.m in Sources */,
+				065C57B21FCEE112003EC649 /* AddDeviceViewController.m in Sources */,
 				26485EA79A692142C4C7EEBA /* AppDelegate.m in Sources */,
 				0695D3671FCC73820000171F /* MyDeviceViewController.m in Sources */,
 				06576B181FC97D62005A48A5 /* MyViewController.m in Sources */,
@@ -305,12 +312,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BG2BJ9SBFR;
 				INFOPLIST_FILE = ble/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hex.ble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -319,12 +329,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BG2BJ9SBFR;
 				INFOPLIST_FILE = ble/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hex.ble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;

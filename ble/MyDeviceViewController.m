@@ -8,7 +8,8 @@
 
 #import "MyDeviceViewController.h"
 
-@interface MyDeviceViewController ()
+@interface MyDeviceViewController ()<UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -17,7 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSLog(@"mydeviceview!");
+
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,6 +29,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark <UITableViewDelegate>
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+
+    if(indexPath.section == 0) {
+        if(indexPath.row == 0) {
+            cell.textLabel.text = @"ss";
+        }
+    }
+
+    return cell;
+}
 /*
 #pragma mark - Navigation
 
