@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *label;
 - (IBAction)onScan:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btn;
+- (IBAction)onClear:(id)sender;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) CBCentralManager *manager;
 //用于保存被发现设备
@@ -32,6 +33,7 @@
     _discoverPeripherals = [NSMutableArray array];
     _label.text = @"Scan";
 //    _tableView.rowHeight = 60;
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,10 +72,8 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"select!");
-    CBPeripheral *peripheral = _discoverPeripherals [indexPath.row];
-    _selPeripheral = peripheral;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    _selPeripheral = _discoverPeripherals[indexPath.row];
     [_manager connectPeripheral:_selPeripheral options:nil];
 }
 
@@ -116,6 +116,7 @@
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *, id> *)advertisementData RSSI:(NSNumber *)RSSI {
+    NSLog(@"%@",peripheral);
     BOOL isExisted = NO;
     for (CBPeripheral *myPeropheral in _discoverPeripherals) {
         if (myPeropheral.identifier == peripheral.identifier) {
@@ -123,10 +124,9 @@
         }
     }
 
-
     if (!isExisted) {
         [_discoverPeripherals addObject:peripheral];
-        NSLog(@"%@",_discoverPeripherals);
+//        NSLog(@"%@",_discoverPeripherals);
     }
     [_tableView reloadData];
 }
@@ -179,5 +179,9 @@
         [_btn setTitle:@"Scan" forState:UIControlStateNormal];
         [_manager stopScan];
     }
+}
+- (IBAction)onClear:(id)sender {
+    [_discoverPeripherals removeAllObjects];
+    [_tableView reloadData];
 }
 @end
