@@ -26,14 +26,11 @@
     _stackView.backgroundColor = [UIColor blueColor];
 
     CGRect stackRect = _stackView.frame;
-    NSLog(@"%f", stackRect.size.height);
-    NSLog(@"%f", stackRect.size.width);
-
 
     CGRect tabRect = CGRectMake(10, 10, stackRect.size.width - 20, stackRect.size.height/5 - 20);
 
     UIView *view1 = [[UIView alloc] init];
-    view1.backgroundColor = [UIColor redColor];
+//    view1.backgroundColor = [UIColor redColor];
 
     UIView *view2 = [[UIView alloc] init];
     view2.backgroundColor = [UIColor redColor];
@@ -70,6 +67,10 @@
     UIImageView *imageView5 = [[UIImageView alloc] initWithFrame:tabRect];
     imageView5.image = img5;
 
+    UIGestureRecognizer *gestureRecognizer = [[UIGestureRecognizer alloc] initWithTarget:self action:@selector(onSel)];
+    gestureRecognizer.delegate = self;
+    [imageView1 addGestureRecognizer:gestureRecognizer];
+
 
     [view1 addSubview:imageView1];
     [view2 addSubview:imageView2];
@@ -77,11 +78,17 @@
     [view4 addSubview:imageView4];
     [view5 addSubview:imageView5];
 
+
     [_stackView addArrangedSubview:view1];
     [_stackView addArrangedSubview:view2];
     [_stackView addArrangedSubview:view3];
     [_stackView addArrangedSubview:view4];
     [_stackView addArrangedSubview:view5];
+
+}
+
+- (void)onSel {
+    NSLog(@"Press!");
 }
 
 - (void)didReceiveMemoryWarning {
