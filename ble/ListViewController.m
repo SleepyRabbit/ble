@@ -23,32 +23,34 @@
     _stackView.alignment = UIStackViewAlignmentFill;
     _stackView.distribution = UIStackViewDistributionFillEqually;   //子控件自动布局为大小相等的控件
     _stackView.spacing = 0;
-    _stackView.backgroundColor = [UIColor blueColor];
+//    _stackView.backgroundColor = [UIColor blueColor];
+    _stackView.backgroundColor = [UIColor colorWithRed:241.0/255.0 green:241.0/255.0 blue:241.0/255.0 alpha:1.0];
 
     CGRect stackRect = _stackView.frame;
 
     CGRect tabRect = CGRectMake(10, 10, stackRect.size.width - 20, stackRect.size.height/5 - 20);
 
     UIView *view1 = [[UIView alloc] init];
+    view1.backgroundColor = [UIColor colorWithRed:241.0/255.0 green:241.0/255.0 blue:241.0/255.0 alpha:1.0];
 //    view1.backgroundColor = [UIColor redColor];
 
     UIView *view2 = [[UIView alloc] init];
-    view2.backgroundColor = [UIColor redColor];
+//    view2.backgroundColor = [UIColor redColor];
 
     UIView *view3 = [[UIView alloc] init];
-    view3.backgroundColor = [UIColor redColor];
+//    view3.backgroundColor = [UIColor redColor];
 
     UIView *view4 = [[UIView alloc] init];
-    view4.backgroundColor = [UIColor redColor];
+//    view4.backgroundColor = [UIColor redColor];
 
     UIView *view5 = [[UIView alloc] init];
-    view5.backgroundColor = [UIColor redColor];
+//    view5.backgroundColor = [UIColor redColor];
 
     UIImage *img1 = [UIImage imageNamed:@"expression.jpg"];
     UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:tabRect];
     imageView1.image = img1;
 //    [imageView1 layoutIfNeeded];
-    imageView1.layer.cornerRadius = 10;
+    imageView1.layer.cornerRadius = 6;
     imageView1.clipsToBounds = YES;
 
     UIImage *img2 = [UIImage imageNamed:@"expression.jpg"];

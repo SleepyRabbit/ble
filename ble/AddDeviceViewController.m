@@ -57,7 +57,7 @@
     NSString *identifier = @"peripheral";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
     }
     CBPeripheral *peripheral = [discoverPeripherals[indexPath.row] objectAtIndex:0];
     NSNumber *rssi = [discoverPeripherals[indexPath.row] objectAtIndex:1];
