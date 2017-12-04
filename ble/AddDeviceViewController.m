@@ -9,10 +9,10 @@
 #import "AddDeviceViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface AddDeviceViewController ()<UITableViewDelegate, UITableViewDataSource, CBCentralManagerDelegate> {
+@interface AddDeviceViewController ()<UITableViewDelegate, UITableViewDataSource, CBCentralManagerDelegate, CBPeripheralDelegate> {
     CBCentralManager *manager;  //CentralManager
     CBPeripheral *selPeripheral;
-    NSMutableArray *discoverPeripherals;
+    NSMutableArray *discoverPeripherals; //discoverPeripherals是一个二维数组，格式如下
     /* discoverPeripherals {
         CBPeripheral *peripheral;
         NSNumber *rssi;
@@ -30,12 +30,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    _tableView.delegate = self;   //代理
+    _tableView.dataSource = self;       //数据源
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];     //去掉对于的cell
 
-    discoverPeripherals = [NSMutableArray array];
-    manager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
+    discoverPeripherals = [NSMutableArray array];  //初始化
+    manager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];  //初始化CBCentralManager
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +64,12 @@
     cell.textLabel.text = [NSString stringWithFormat:@"设备名称 ：%@",peripheral.name];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@db", rssi];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    selPeripheral = [discoverPeripherals[indexPath.row] objectAtIndex:0];
+    NSLog(@"%@", selPeripheral);
+    [manager connectPeripheral:selPeripheral options:nil];      //连接设备
 }
 
 #pragma mark <CoreBluetooth delegate>
@@ -125,6 +131,23 @@
     }
 //    NSLog(@"%@", discoverPeripherals);
     [_tableView reloadData];
+}
+
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+    NSLog(@"连接成功！");
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Tips" message:@"设备连接成功！" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Tips" message:@"设备连接成功！" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:alertAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+    [manager stopScan];
+}
+
+- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error {
+    NSLog(@">>>外设连接断开连接 %@: %@\n", [peripheral name], [error localizedDescription]);
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"蓝牙设备%@已经断开！" preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"蓝牙设备%@已经断开",[peripheral name]] message:@"请重新扫描" delegate:self cancelButtonTitle:@"好的" otherButtonTitles: nil];
+//    [alertView show];
 }
 
 /*

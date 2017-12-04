@@ -24,7 +24,7 @@
     _tableView.dataSource = self;                                       //tableView dataSource
     _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;  //Single separator line
 //    _tableView.backgroundColor = [UIColor colorWithRed:198/255.0 green:198/255.0 blue:203/255.0 alpha:1.0];
-    _tableView.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1.0];
+    _tableView.backgroundColor = [UIColor colorWithRed:231/255.0 green:231/255.0 blue:231/255.0 alpha:1.0];
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
@@ -40,7 +40,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,27 +65,34 @@
 
     switch(indexPath.row) {
         case 0:
-            cell.textLabel.text = @"我的设备";
-            cell.detailTextLabel.text = @"我问问";
-            cell.imageView.image = [UIImage imageNamed:@"1.png"];
-            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.textLabel.text = @"编辑纸条";
+            cell.imageView.image = [UIImage imageNamed:@"paper.png"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 1:
-            cell.textLabel.text = @"我的收藏";
+            cell.textLabel.text = @"打印照片";
+            cell.imageView.image = [UIImage imageNamed:@"photo.png"];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 2:
-            cell.textLabel.text = @"地址管理";
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            cell.textLabel.text = @"便利贴";
+            cell.imageView.image = [UIImage imageNamed:@"sticky.png"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 3:
-            cell.textLabel.text = @"反馈";
-            cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+            cell.textLabel.text = @"代办清单";
+            cell.imageView.image = [UIImage imageNamed:@"list.png"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case 4:
-            cell.textLabel.text = @"关于";
-            cell.accessoryType = UITableViewCellAccessoryDetailButton;
-
+            cell.textLabel.text = @"文本打印";
+            cell.imageView.image = [UIImage imageNamed:@"note.png"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            break;
+        case 5:
+            cell.textLabel.text = @"网页打印";
+            cell.imageView.image = [UIImage imageNamed:@"web.png"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         default:
             break;
@@ -95,7 +102,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 120;
+    return 130;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -79,7 +79,7 @@
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
-                            <integer key="value" value="1"/>
+                            <integer key="value" value="0"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -174,11 +174,11 @@
             </objects>
             <point key="canvasLocation" x="1840.8" y="-129.08545727136433"/>
         </scene>
-        <!--Device-->
+        <!--设备-->
         <scene sceneID="Cof-y6-u2r">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OsF-JU-nvk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Device" image="1" id="GI4-0M-ZAD"/>
+                    <tabBarItem key="tabBarItem" title="设备" image="bluetooth" id="GI4-0M-ZAD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8jL-Bk-eEc">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -193,11 +193,11 @@
             </objects>
             <point key="canvasLocation" x="337" y="-129"/>
         </scene>
-        <!--Item-->
+        <!--我的-->
         <scene sceneID="NJZ-Qc-voi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jzK-Cd-Pfg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="people" id="1Of-PT-Ys7"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="my" id="1Of-PT-Ys7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Erx-gu-Msw">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -212,11 +212,11 @@
             </objects>
             <point key="canvasLocation" x="338" y="1303"/>
         </scene>
-        <!--List-->
+        <!--打印-->
         <scene sceneID="Qw6-Ob-Okv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t0b-zu-XGn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" image="2" id="mCa-P4-wBv"/>
+                    <tabBarItem key="tabBarItem" title="打印" image="print" id="mCa-P4-wBv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8x8-dE-P8y">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -259,8 +259,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="29" height="29"/>
-        <image name="2" width="29" height="29"/>
-        <image name="people" width="27" height="27"/>
+        <image name="bluetooth" width="27" height="27"/>
+        <image name="my" width="27" height="27"/>
+        <image name="print" width="27" height="27"/>
     </resources>
 </document>
