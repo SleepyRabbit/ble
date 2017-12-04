@@ -55,6 +55,7 @@
     cell.separatorInset = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
     cell.layoutMargins = UIEdgeInsetsZero;
     cell.preservesSuperviewLayoutMargins = NO;
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     switch(indexPath.row) {
         case 0:
@@ -90,6 +91,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [_tableView cellForRowAtIndexPath:indexPath];
     NSLog(@"Select is: %@", cell.textLabel.text);
+    [_tableView deselectRowAtIndexPath:indexPath animated:YES];   //cell被选中后颜色底色迅速消失
 
     if(indexPath.section == 0) {
         if(indexPath.row == 1) {

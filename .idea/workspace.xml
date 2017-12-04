@@ -4,9 +4,6 @@
     <list default="true" id="11e97d94-ad6b-448a-9bae-b468db321d73" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ble.xcodeproj/project.xcworkspace/xcuserdata/houenxing.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/ble.xcodeproj/project.xcworkspace/xcuserdata/houenxing.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ble.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/ble.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ble/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/ble/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ble/ListViewController.h" afterPath="$PROJECT_DIR$/ble/ListViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ble/ListViewController.m" afterPath="$PROJECT_DIR$/ble/ListViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ble/MyViewController.m" afterPath="$PROJECT_DIR$/ble/MyViewController.m" />
     </list>
@@ -23,8 +20,8 @@
       <file leaf-file-name="MyViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ble/MyViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="56" selection-end-column="46" />
+            <state relative-caret-position="187">
+              <caret line="93" column="4" lean-forward="true" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="84" />
               <folding>
                 <element signature="e#123#151#0" expanded="true" />
               </folding>
@@ -89,8 +86,8 @@
       <file leaf-file-name="ListViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ble/ListViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="237">
+              <caret line="101" column="84" lean-forward="false" selection-start-line="101" selection-start-column="84" selection-end-line="101" selection-end-column="84" />
               <folding>
                 <element signature="e#124#154#0" expanded="true" />
               </folding>
@@ -139,9 +136,9 @@
         <option value="$PROJECT_DIR$/ble/MyDeviceViewController.m" />
         <option value="$PROJECT_DIR$/ble/AddDeviceViewController.m" />
         <option value="$PROJECT_DIR$/ble/MyViewController.h" />
-        <option value="$PROJECT_DIR$/ble/MyViewController.m" />
         <option value="$PROJECT_DIR$/ble/CustomerCell.m" />
         <option value="$PROJECT_DIR$/ble/DeviceViewController.m" />
+        <option value="$PROJECT_DIR$/ble/MyViewController.m" />
         <option value="$PROJECT_DIR$/ble/ListViewController.m" />
       </list>
     </option>
@@ -250,7 +247,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64635000" />
+    <option name="totallyTimeSpent" value="65236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="695" extended-state="6" />
@@ -545,16 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ble/MyViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="56" selection-end-column="46" />
-          <folding>
-            <element signature="e#123#151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CBPeer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -581,10 +568,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ble/MyViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="93" column="4" lean-forward="true" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="84" />
+          <folding>
+            <element signature="e#123#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ble/ListViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state relative-caret-position="237">
+          <caret line="101" column="84" lean-forward="false" selection-start-line="101" selection-start-column="84" selection-end-line="101" selection-end-column="84" />
           <folding>
             <element signature="e#124#154#0" expanded="true" />
           </folding>

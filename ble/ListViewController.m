@@ -61,6 +61,7 @@
     cell.separatorInset = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
     cell.layoutMargins = UIEdgeInsetsZero;
     cell.preservesSuperviewLayoutMargins = NO;
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     switch(indexPath.row) {
         case 0:
@@ -95,6 +96,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 120;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_tableView deselectRowAtIndexPath:indexPath animated:YES];   //cell被选中后颜色底色迅速消失
 }
 
 /*
