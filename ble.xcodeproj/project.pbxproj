@@ -11,9 +11,9 @@
 		065C57AC1FCD9C39003EC649 /* expression.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 065C57AB1FCD9C39003EC649 /* expression.jpg */; };
 		065C57B21FCEE112003EC649 /* AddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C57B11FCEE112003EC649 /* AddDeviceViewController.m */; };
 		065C57B51FD4563D003EC649 /* CustomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C57B41FD4563D003EC649 /* CustomerCell.m */; };
+		066125D11FD4F913003AE2CF /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066125D01FD4F913003AE2CF /* ListViewController.m */; };
 		0695D3671FCC73820000171F /* MyDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0695D3661FCC73820000171F /* MyDeviceViewController.m */; };
 		06D7F06B1FC6A36500903E18 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7F06A1FC6A36500903E18 /* DeviceViewController.m */; };
-		06D7F06E1FC6A37D00903E18 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7F06D1FC6A37D00903E18 /* ListViewController.m */; };
 		26485370C46E9C67B7839222 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26485417AFCDF23E21F56105 /* main.m */; };
 		2648543981E895ED1E26F333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264853975999D690C0E06EB0 /* LaunchScreen.storyboard */; };
 		2648599DBB345E5A13FA9C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264850B4E58BC91F1B2C8DB6 /* Assets.xcassets */; };
@@ -29,12 +29,12 @@
 		065C57B11FCEE112003EC649 /* AddDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddDeviceViewController.m; sourceTree = "<group>"; };
 		065C57B31FD4563D003EC649 /* CustomerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerCell.h; sourceTree = "<group>"; };
 		065C57B41FD4563D003EC649 /* CustomerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerCell.m; sourceTree = "<group>"; };
+		066125CF1FD4F913003AE2CF /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		066125D01FD4F913003AE2CF /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		0695D3651FCC73820000171F /* MyDeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDeviceViewController.h; sourceTree = "<group>"; };
 		0695D3661FCC73820000171F /* MyDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeviceViewController.m; sourceTree = "<group>"; };
 		06D7F0691FC6A36500903E18 /* DeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
 		06D7F06A1FC6A36500903E18 /* DeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceViewController.m; sourceTree = "<group>"; };
-		06D7F06C1FC6A37D00903E18 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		06D7F06D1FC6A37D00903E18 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		264850B4E58BC91F1B2C8DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		264851BC18084A24E0863BB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		264853F0951BB2278581C602 /* ble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ble.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,10 +91,10 @@
 				06576B171FC97D62005A48A5 /* MyViewController.m */,
 				06D7F0691FC6A36500903E18 /* DeviceViewController.h */,
 				06D7F06A1FC6A36500903E18 /* DeviceViewController.m */,
-				06D7F06C1FC6A37D00903E18 /* ListViewController.h */,
-				06D7F06D1FC6A37D00903E18 /* ListViewController.m */,
 				065C57B31FD4563D003EC649 /* CustomerCell.h */,
 				065C57B41FD4563D003EC649 /* CustomerCell.m */,
+				066125CF1FD4F913003AE2CF /* ListViewController.h */,
+				066125D01FD4F913003AE2CF /* ListViewController.m */,
 			);
 			path = ble;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			files = (
 				26485370C46E9C67B7839222 /* main.m in Sources */,
 				06D7F06B1FC6A36500903E18 /* DeviceViewController.m in Sources */,
-				06D7F06E1FC6A37D00903E18 /* ListViewController.m in Sources */,
+				066125D11FD4F913003AE2CF /* ListViewController.m in Sources */,
 				065C57B51FD4563D003EC649 /* CustomerCell.m in Sources */,
 				065C57B21FCEE112003EC649 /* AddDeviceViewController.m in Sources */,
 				26485EA79A692142C4C7EEBA /* AppDelegate.m in Sources */,

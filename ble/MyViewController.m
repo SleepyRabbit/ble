@@ -8,7 +8,6 @@
 
 #import "MyViewController.h"
 #import "MyDeviceViewController.h"
-#import "CustomerCell.h"
 
 @interface MyViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,8 +20,8 @@
     // Do any additional setup after loading the view.
     _tableView.delegate = self;                                         //tableView delegate
     _tableView.dataSource = self;                                       //tableView dataSource
-//    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;  //Single separator line
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;      //No separator line
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;  //Single separator line
+//    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;      //No separator line
 //    _tableView.backgroundColor = [UIColor colorWithRed:198/255.0 green:198/255.0 blue:203/255.0 alpha:1.0];
     _tableView.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1.0];
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -48,14 +47,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *reuse = @"cell";
 
-//    UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:reuse];
-//    if(!cell) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuse];
-//    }
-
-    CustomerCell *cell = [_tableView dequeueReusableCellWithIdentifier:reuse];
+    UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:reuse];
     if(!cell) {
-        cell = [[CustomerCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuse];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuse];
     }
 
     cell.separatorInset = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
@@ -90,8 +84,6 @@
             break;
     }
 
-    cell.layer.masksToBounds = YES;
-    cell.layer.cornerRadius = 8.0;
     return cell;
 }
 
@@ -106,10 +98,6 @@
 
         }
     }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90;
 }
 
 /*
