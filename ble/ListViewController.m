@@ -8,6 +8,7 @@
 
 #import "ListViewController.h"
 #import "CustomerCell.h"
+#import "PhotoViewController.h"
 
 @interface ListViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -107,6 +108,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];   //cell被选中后颜色底色迅速消失
+    if(indexPath.section == 0) {
+        if(indexPath.row == 1) {
+            PhotoViewController *photoViewController = (PhotoViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"PhotoViewController"];
+            [self.navigationController pushViewController:photoViewController animated:NO];
+        }
+    }
 }
 
 /*

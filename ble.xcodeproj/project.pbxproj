@@ -13,6 +13,7 @@
 		065C57B51FD4563D003EC649 /* CustomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C57B41FD4563D003EC649 /* CustomerCell.m */; };
 		066125D11FD4F913003AE2CF /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066125D01FD4F913003AE2CF /* ListViewController.m */; };
 		0695D3671FCC73820000171F /* MyDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0695D3661FCC73820000171F /* MyDeviceViewController.m */; };
+		06BDC2A81FD6FD83005DD91A /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BDC2A71FD6FD83005DD91A /* PhotoViewController.m */; };
 		06D7F06B1FC6A36500903E18 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7F06A1FC6A36500903E18 /* DeviceViewController.m */; };
 		26485370C46E9C67B7839222 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26485417AFCDF23E21F56105 /* main.m */; };
 		2648543981E895ED1E26F333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264853975999D690C0E06EB0 /* LaunchScreen.storyboard */; };
@@ -33,6 +34,8 @@
 		066125D01FD4F913003AE2CF /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		0695D3651FCC73820000171F /* MyDeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDeviceViewController.h; sourceTree = "<group>"; };
 		0695D3661FCC73820000171F /* MyDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDeviceViewController.m; sourceTree = "<group>"; };
+		06BDC2A61FD6FD83005DD91A /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		06BDC2A71FD6FD83005DD91A /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		06D7F0691FC6A36500903E18 /* DeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
 		06D7F06A1FC6A36500903E18 /* DeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceViewController.m; sourceTree = "<group>"; };
 		264850B4E58BC91F1B2C8DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +67,15 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		06BDC2A51FD6FD44005DD91A /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				06BDC2A61FD6FD83005DD91A /* PhotoViewController.h */,
+				06BDC2A71FD6FD83005DD91A /* PhotoViewController.m */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
 		2648530BECA1F8D1DFA6BCCD /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +87,7 @@
 		26485401A73D84758F897A89 /* ble */ = {
 			isa = PBXGroup;
 			children = (
+				06BDC2A51FD6FD44005DD91A /* ListView */,
 				066125CA1FCD5373003AE2CF /* image */,
 				26485B5D83C1E9BFF463952B /* Info.plist */,
 				264850B4E58BC91F1B2C8DB6 /* Assets.xcassets */,
@@ -183,6 +196,7 @@
 				065C57B51FD4563D003EC649 /* CustomerCell.m in Sources */,
 				065C57B21FCEE112003EC649 /* AddDeviceViewController.m in Sources */,
 				26485EA79A692142C4C7EEBA /* AppDelegate.m in Sources */,
+				06BDC2A81FD6FD83005DD91A /* PhotoViewController.m in Sources */,
 				0695D3671FCC73820000171F /* MyDeviceViewController.m in Sources */,
 				06576B181FC97D62005A48A5 /* MyViewController.m in Sources */,
 			);

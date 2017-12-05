@@ -68,7 +68,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     selPeripheral = [discoverPeripherals[indexPath.row] objectAtIndex:0];
-    NSLog(@"%@", selPeripheral);
+//    NSLog(@"%@", selPeripheral);
     [manager connectPeripheral:selPeripheral options:nil];      //连接设备
 }
 
