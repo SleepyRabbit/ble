@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="1109.5999999999999" y="580.65967016491754"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo View Controller-->
         <scene sceneID="g6E-rx-Nsa">
             <objects>
-                <viewController storyboardIdentifier="PhotoViewController" id="By3-6b-IKo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoViewController" id="By3-6b-IKo" customClass="PhotoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="893-wQ-fnR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
