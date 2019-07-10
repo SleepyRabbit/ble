@@ -60,7 +60,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
     }
     CBPeripheral *peripheral = [discoverPeripherals[indexPath.row] objectAtIndex:0];
-    NSNumber *rssi = [discoverPeripherals[indexPath.row] objectAtIndex:1];
+    NSNumber *rssi = [discoverPeripherals[indexPath.row] objectAtIndex:1];    
     cell.textLabel.text = [NSString stringWithFormat:@"设备名称 ：%@",peripheral.name];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@db", rssi];
     return cell;
@@ -124,10 +124,13 @@
     }
 
     if(!isExist) {
-        NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:2];
-        [array addObject:peripheral];
-        [array addObject:RSSI];
-        [discoverPeripherals addObject:array];
+        if(!(peripheral.name==nil || [peripheral.name isKindOfClass:[NSNull class]])) {
+            NSLog(@"add device!");
+            NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:2];
+            [array addObject:peripheral];
+            [array addObject:RSSI];
+            [discoverPeripherals addObject:array];
+        }
     }
 //    NSLog(@"%@", discoverPeripherals);
     [_tableView reloadData];
